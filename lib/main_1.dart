@@ -1,20 +1,16 @@
-import 'package:flutter/material.dart';
+class CarsMode{
+CarsModel([
+  required this.Id,
+  required this.year,
+  required this.make,
+  required this.carsmodel,
+  required this.type
+]);
 
-void main() {
-  runApp(const MainApp());
-}
+final int id;
+final int year;
+final String make;
+final String model;
+final String type;
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World 1!'),
-        ),
-      ),
-    );
-  }
 }
