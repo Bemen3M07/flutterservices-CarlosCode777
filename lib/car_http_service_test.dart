@@ -1,5 +1,5 @@
 import 'car_http_service.dart';
-import 'test/flutter_test.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('CarsApi', () {
