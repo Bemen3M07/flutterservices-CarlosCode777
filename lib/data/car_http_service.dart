@@ -1,4 +1,4 @@
-import 'car_model.dart';
+import '../model/car_model.dart';
 import 'package:http/http.dart' as http;
 // import 'package:rentcar/model/brand_model.dart';
 // import 'package:rentcar/model/car_model.dart';
