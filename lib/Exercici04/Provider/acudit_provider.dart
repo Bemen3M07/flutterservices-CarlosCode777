@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'acudit_service.dart';  // Importa el servicio que obtendrá los chistes desde la API
-import 'acudit_model.dart';  // Importa el modelo de datos para los chistes
+import '../Service/acudit_service.dart';  // Importa el servicio que obtendrá los chistes desde la API
+import '../Modelo/acudit_model.dart';  // Importa el modelo de datos para los chistes
 
 // El AcuditProvider es el encargado de gestionar el estado de los chistes
 class AcuditProvider with ChangeNotifier {

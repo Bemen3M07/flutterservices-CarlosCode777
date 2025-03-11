@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';  // Se importa el paquete de Flutter para usar widgets y otras funcionalidades de la interfaz de usuario
 import 'package:provider/provider.dart';  // Se importa el paquete provider para gestionar el estado de la aplicación con el patrón Provider
-import 'acudit_provider.dart';  // Se importa el proveedor que maneja la lógica de obtener un chiste
+import '../Provider/acudit_provider.dart';  // Se importa el proveedor que maneja la lógica de obtener un chiste
 
 // HomeScreen es un widget sin estado (StatelessWidget) que representa la pantalla principal
 class HomeScreen extends StatelessWidget {

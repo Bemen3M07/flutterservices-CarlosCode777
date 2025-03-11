@@ -1,6 +1,6 @@
 import 'dart:convert';  // Se importa para poder convertir la respuesta de la API desde JSON
 import 'package:http/http.dart' as http;  // Se importa el paquete http para realizar las solicitudes HTTP
-import 'acudit_model.dart';  // Se importa el modelo AcuditModel para mapear la respuesta de la API
+import '../Modelo/acudit_model.dart';  // Se importa el modelo AcuditModel para mapear la respuesta de la API
 
 // La clase AcuditService es responsable de interactuar con la API externa para obtener los chistes
 class AcuditService {
