@@ -4,10 +4,11 @@ import 'providers/car_provider.dart';
 import 'page/home_screen.dart';
 
 void main() {
+  // Configura el ChangeNotifierProvider para que el CarProvider esté disponible en toda la aplicación
   runApp(
     ChangeNotifierProvider(
-      create: (_) => CarProvider(),
-      child: const MyApp(),
+      create: (_) => CarProvider(),  // Crea una instancia de CarProvider
+      child: const MyApp(),  // Arranca la aplicación
     ),
   );
 }
@@ -18,10 +19,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Car App',
+      debugShowCheckedModeBanner: false,  // Desactiva el banner de depuración
+      title: 'Car App',  // Título de la aplicación
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue,  // Color primario de la app
       ),
       home: HomeScreen(),  // Pantalla principal
     );
