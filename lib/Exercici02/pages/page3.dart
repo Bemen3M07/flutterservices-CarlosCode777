@@ -16,7 +16,7 @@ class _Page3State extends State<Page3> {
 
     return Center(
 
-      child: Text('Pagina 1'),
+      child: Text('Pagina 3'),
     );
   }
 

@@ -1,3 +1,6 @@
+import 'package:empty/Exercici02/pages/page1.dart';
+import 'package:empty/Exercici02/pages/page2.dart';
+import 'package:empty/Exercici02/pages/page3.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -10,17 +13,32 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = <Widget>[
+
+    const Page1(),
+    const Page2(),
+    const Page3(),
+
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
     
-      body: const Center(
-    
-        child: Text('Provider counter'),
-    
-      ),
+      body: _pages[_selectedIndex],
 
       bottomNavigationBar: BottomNavigationBar(
+
+        currentIndex: _selectedIndex,
+
+        onTap: (int index){
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
         
         items: const [
 
