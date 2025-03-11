@@ -9,19 +9,13 @@ class CarHttpService {
   final String _headerKey = "857f4d0647msh881d49c5ef1fc50p14c664jsna8005123d4c2";
   final String _headerHost = "car-data.p.rapidapi.com";
 
-  /*
-  Obtenir la llista de cotxes
-  */
   Future<List<CarsModel>> getCars() async {
-    //URL de l'endpoint: És la URL del servidor, més la URL de l'endpoint
-    var uri = Uri.parse(
-        "$_serverUrl/cars"); //Aquí hem de canviar el text de l'exmple per /cars
+    var uri = Uri.parse("$_serverUrl/cars"); 
 
-    //Fem la petició GET i esperem la resposta
     var response = await http.get(uri, headers: {
-      "x-rapidapi-key": _headerKey, //Aquesta informació està a la "
+      "x-rapidapi-key": _headerKey, 
       "x-rapidapi-host":
-          _headerHost //Aquí hem de canviar el text de l'exmple per "x-rapidapi-host"
+          _headerHost
     });
 
     //Control d'errors. Si la resposta és 200, tot ha anat bé.  Si nó, llancem un error
@@ -32,18 +26,21 @@ class CarHttpService {
     }
   }
 
-  // Future<List<String>> getBrand() async {
-  //   var uri = Uri.parse(_serverUrl + endPointBrands);
-  //   var response = await http.get(uri ,
-  //       headers: {
-  //         headerKey: _headerKey,
-  //         headerHost : _headerHost
-  //       });
+  //DOCUMENTAR
 
-  //   if(response.statusCode == 200){
-  //     return brandModelFromJson(response.body);
-  //   }else{
-  //     throw(messageErrorBrandApi);
-  //   }
-  // }
+//   Future<List<String>> getBrand() async {
+//     var uri = Uri.parse(_serverUrl + endPointCars);
+//     var response = await http.get(uri,
+//         headers: {
+//           _headerKey: _headerKey,
+//           _headerHost : _headerHost
+//         });
+//
+//     if(response.statusCode == 200){
+//       return carsModelFromJson(response.body);
+//     }else{
+//       throw(messageErrorCarsApi);
+//     }
+//   }
+//   
 }
