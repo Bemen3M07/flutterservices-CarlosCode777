@@ -12,13 +12,46 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
     
-      body: Center(
+      body: const Center(
     
         child: Text('Provider counter'),
     
       ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        
+        items: const [
+
+            BottomNavigationBarItem(
+            
+            icon: Icon(Icons.home),
+
+            label: 'Page 1',
+            
+            ),
+
+            BottomNavigationBarItem(
+            
+            icon: Icon(Icons.business),
+
+            label: 'Page 2',
+            
+            ),
+
+            BottomNavigationBarItem(
+            
+            icon: Icon(Icons.school),
+
+            label: 'Page 3',
+            
+            ),
+
+        ],
+
+      ),
+
     );
   }
 }
