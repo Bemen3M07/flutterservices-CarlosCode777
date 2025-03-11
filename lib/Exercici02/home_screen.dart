@@ -1,7 +1,9 @@
 import 'package:empty/Exercici02/pages/page1.dart';
 import 'package:empty/Exercici02/pages/page2.dart';
 import 'package:empty/Exercici02/pages/page3.dart';
+import 'package:empty/Exercici02/providers/counter_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -27,6 +29,24 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      appBar: AppBar(
+
+        title: const Text('Material App Bar'),
+
+        actions: [
+
+          TextButton(
+            
+            onPressed: null, 
+          
+            child: Text(context.watch<CounterProvider>().counter.toString(),
+            style: const TextStyle(color: Colors.white),
+
+          ))
+        ],
+
+      ),
     
       body: _pages[_selectedIndex],
 

@@ -1,8 +1,18 @@
 import 'package:empty/Exercici02/home_screen.dart';
+import 'package:empty/Exercici02/providers/counter_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+
+    ChangeNotifierProvider(
+      
+      create: (_) => CounterProvider(),
+      child: const MainApp(),
+      
+      )
+  );
 }
 
 class MainApp extends StatelessWidget {

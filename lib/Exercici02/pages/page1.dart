@@ -1,4 +1,6 @@
+import 'package:empty/Exercici02/providers/counter_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Page1 extends StatefulWidget {
 
@@ -10,8 +12,6 @@ class Page1 extends StatefulWidget {
 
 class _Page1State extends State<Page1> {
 
-  int _counter = 0;
-
   @override
 
   Widget build(BuildContext context) {
@@ -22,14 +22,12 @@ class _Page1State extends State<Page1> {
 
         children: [
 
-          Text(_counter.toString(), style: const TextStyle(fontSize: 50)),
+          Text(context.watch<CounterProvider>().counter.toString(), style: const TextStyle(fontSize: 50)),
           ElevatedButton(
             
             onPressed: (){
 
-              setState(() {
-                _counter++;
-              });
+              context.read<CounterProvider>().increment();
 
           }, child: Text('Sumar'))
 
