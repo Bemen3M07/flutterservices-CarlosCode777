@@ -10,13 +10,31 @@ class Page1 extends StatefulWidget {
 
 class _Page1State extends State<Page1> {
 
+  int _counter = 0;
+
   @override
 
   Widget build(BuildContext context) {
 
     return Center(
 
-      child: Text('Pagina 1'),
+      child: Column(
+
+        children: [
+
+          Text(_counter.toString(), style: const TextStyle(fontSize: 50)),
+          ElevatedButton(
+            
+            onPressed: (){
+
+              setState(() {
+                _counter++;
+              });
+
+          }, child: Text('Sumar'))
+
+        ],
+      ),
     );
   }
 
