@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: null, 
           
             child: Text(context.watch<CounterProvider>().counter.toString(),
-            style: const TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.green),
 
           ))
         ],

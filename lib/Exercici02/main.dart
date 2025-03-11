@@ -28,7 +28,7 @@ class MainApp extends StatelessWidget {
 
       theme: ThemeData(
 
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepOrange,
 
       ),
 
