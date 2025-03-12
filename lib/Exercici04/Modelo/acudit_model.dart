@@ -21,4 +21,4 @@ class AcuditModel {
       punchline: map['punchline'],  // Accedeix al valor de la clau 'punchline' (resposta)
     );
   }
-}
+} 
